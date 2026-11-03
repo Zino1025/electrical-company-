@@ -1,4 +1,4 @@
-// ===== JV Electric client updates: hero cleanup, mobile-only recent-work carousel, footer socials =====
+
 (() => {
   const MOBILE_MAX = 760;
 
@@ -129,19 +129,19 @@
     const style = document.createElement('style');
     style.id = 'jv-client-update-styles';
     style.textContent = `
-      /* Client request: keep the back hero photo and remove the two photos layered in front. */
+       
       .hero-visual .project-card-small,
       .hero-visual .project-card-third {
         display: none !important;
       }
 
-      /* Extra recent-work photos are mobile-only; desktop keeps the original four-photo gallery. */
+       
       .work-card-mobile-extra,
       .work-carousel-controls {
         display: none !important;
       }
 
-      /* Small social row only. Do not expand/rebuild the footer. */
+       
       .footer-social-links {
         display: flex !important;
         align-items: center !important;
@@ -183,9 +183,9 @@
       }
 
       @media (max-width: ${MOBILE_MAX}px) {
-        /* Mobile hero: keep the desktop tilt, but make the single phone photo completely straight/flat.
-           The shorter visual container removes the empty space left behind by the two removed cards,
-           which pulls Customer Reviews closer to the hero image without changing desktop. */
+         
+
+
         .hero-inner {
           padding-bottom: 18px !important;
         }
@@ -207,7 +207,7 @@
           filter: none !important;
         }
 
-        /* One recent-work image at a time, swipeable, matching the site's other mobile carousels. */
+         
         .work-gallery {
           display: flex !important;
           grid-template-columns: none !important;
@@ -604,10 +604,10 @@
     addFooterSocialLinks();
   };
 
-  // Run now because script.js is loaded at the bottom of index.html.
+
   setup();
 
-  // The existing script has a few DOMContentLoaded image swaps. Reassert after them so the new photos win.
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', reassert, { once: true });
   } else {

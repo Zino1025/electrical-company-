@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" href="favicon-180.png" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Real JV Electric project photos. Existing layout and sizing stay unchanged. */
+     
     .project-placeholder.has-photo,
     .service-media.has-photo,
     .work-placeholder.has-photo,
@@ -42,7 +42,7 @@
       z-index: 1;
     }
 
-    /* v25 requested refinements: static mobile hero cards, top review controls, and icon-based service-area tags */
+     
     .service-area-bolt {
       display: inline-grid;
       place-items: center;
@@ -67,7 +67,7 @@
     }
 
     @media (max-width: 760px) {
-      /* Keep hero image cards completely static on mobile. */
+       
       .project-card,
       .project-card::before,
       .work-card {
@@ -147,7 +147,7 @@
 
 
 
-    /* ===== v27 carousel + responsive stability fixes ===== */
+     
 
     .service-area-bolt {
       display: inline-grid !important;
@@ -194,7 +194,7 @@
         text-transform: uppercase !important;
       }
 
-      /* Exactly three equal-size reviews are visible. The next card stays clipped. */
+       
       .reviews-carousel-shell {
         position: relative !important;
         overflow: visible !important;
@@ -256,7 +256,7 @@
         display: none !important;
       }
 
-      /* Restore the About text and keep the heading close to the content. */
+       
       .about-desktop-layout .about-content {
         justify-content: flex-start !important;
       }
@@ -306,7 +306,7 @@
     }
 
     @media (max-width: 760px) {
-      /* Make the hero photo stack completely non-interactive on phones. */
+       
       .hero-visual .project-card {
         pointer-events: none !important;
         cursor: default !important;
@@ -348,7 +348,7 @@
         opacity: 1 !important;
       }
 
-      /* Main review section stays a normal one-card mobile slider. */
+       
       .reviews-track-viewport {
         overflow: hidden !important;
       }
@@ -414,9 +414,9 @@
     }
 
 
-    /* ===== v28 final desktop/mobile cleanup ===== */
+     
 
-    /* Real service-area map replaces the placeholder treatment. */
+     
     .service-area-map-card.has-map {
       position: relative;
       overflow: hidden;
@@ -440,7 +440,7 @@
     }
 
     @media (max-width: 760px) {
-      /* Slight separation from the dark hero without changing the overall theme. */
+       
       .hero-review-strip {
         background: #15171a !important;
       }
@@ -450,12 +450,12 @@
         border-color: rgba(255,255,255,.10) !important;
       }
 
-      /* Keep the service-area map comfortably sized on phones. */
+       
       .service-area-map-card.has-map {
         min-height: 310px !important;
       }
 
-      /* Tighter, more organized mobile footer. */
+       
       .footer-inner,
       .footer-inner-compact {
         width: calc(100% - 28px) !important;
@@ -491,23 +491,23 @@
         min-width: 0;
       }
 
-      /* Quick Links */
+       
       .footer-column-group > .footer-column:nth-child(2) {
         order: 1;
       }
 
-      /* Contact */
+       
       .footer-column-group > .footer-column:nth-child(5) {
         order: 2;
         grid-column: auto !important;
       }
 
-      /* Service Area */
+       
       .footer-column-group > .footer-column:nth-child(3) {
         order: 3;
       }
 
-      /* Mobile Legal */
+       
       .footer-column-group > .footer-column:nth-child(4) {
         order: 4;
       }
@@ -544,7 +544,7 @@
     }
 
 
-    /* ===== v31 service order, review motion, mobile contrast, footer cleanup ===== */
+     
 
     .reviews-carousel-shell .review-card {
       display: flex !important;
@@ -726,7 +726,7 @@
 
 
 
-    /* ===== final desktop-only copy + service cleanup ===== */
+     
     .desktop-copy-only {
       display: none;
     }
@@ -767,7 +767,7 @@
       }
     }
 
-    /* ===== final mobile polish ===== */
+     
     @media (max-width: 760px) {
       .hero-copy h1 {
         max-width: 360px !important;
@@ -910,9 +910,9 @@
     }
 
 
-    /* ===== carousel stability + final placement fixes ===== */
+     
     @media (min-width: 761px) {
-      /* Remove the old decorative yellow glow from About on desktop. */
+       
       .about-section::after {
         content: none !important;
         display: none !important;
@@ -921,7 +921,7 @@
     }
 
     @media (max-width: 760px) {
-      /* Keep the mini-review arrows immediately beside the navigation dots. */
+       
       .hero-review-carousel {
         grid-template-columns: 1fr 40px max-content 40px 1fr !important;
         column-gap: 3px !important;
@@ -950,7 +950,7 @@
         height: 38px !important;
       }
 
-      /* Slightly larger floating call button, still isolated in the bottom-right. */
+       
       .mobile-floating-call {
         z-index: 999 !important;
         right: 12px !important;
@@ -969,7 +969,7 @@
     }
 
 
-    /* ===== final checkover fixes ===== */
+     
     .services-search:focus-within {
       border-color: #cfd1cd !important;
       box-shadow: 0 10px 28px rgba(17,18,20,.06) !important;
@@ -981,7 +981,7 @@
     }
 
     @media (max-width: 760px) {
-      /* Arrows physically flank the review dots now that all controls share one grid. */
+       
       .hero-review-carousel {
         grid-template-columns: 1fr 42px max-content 42px 1fr !important;
         column-gap: 4px !important;
@@ -1014,7 +1014,7 @@
         justify-self: start !important;
       }
 
-      /* Make sure both service navigation arrows remain visible on phones. */
+       
       .services-rail-button {
         display: grid !important;
       }
@@ -1024,7 +1024,7 @@
     }
 
 
-    /* Smaller mobile hero headline */
+     
     @media (max-width: 760px) {
       .hero h1 {
         font-size: clamp(36px, 9vw, 48px) !important;
@@ -1925,7 +1925,7 @@
         cleanMainCard?.setAttribute('aria-pressed', 'false');
       }
 
-      /* MAIN REVIEWS */
+       
       const shell = document.querySelector('.reviews-carousel-shell');
       const viewport = shell?.querySelector('.reviews-track-viewport');
       const oldTrack = viewport?.querySelector('.reviews-grid');
@@ -2077,7 +2077,7 @@
         requestAnimationFrame(syncMain);
       }
 
-      /* HIGHLIGHTED MOBILE REVIEWS */
+       
       const heroCarousel = document.querySelector('.hero-review-carousel');
       const oldHeroTrack = heroCarousel?.querySelector('.hero-review-track');
       const oldHeroPrev = heroCarousel?.querySelector('.hero-review-prev');

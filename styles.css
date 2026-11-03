@@ -203,7 +203,7 @@ a {
   display: none;
 }
 
-/* Hero */
+ 
 .hero {
   position: relative;
   isolation: isolate;
@@ -706,7 +706,7 @@ a {
   }
 }
 
-/* Desktop company trust bar */
+ 
 .trust-bar {
   display: block;
   position: relative;
@@ -840,7 +840,7 @@ a {
 }
 
 
-/* Services */
+ 
 .services-section {
   position: relative;
   background: #f7f7f5;
@@ -973,7 +973,7 @@ a {
 
 .services-search input::placeholder { color: #81868c; }
 
-/* Hide browser-native search clear controls so there is only one X button. */
+ 
 .services-search input::-webkit-search-cancel-button,
 .services-search input::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -1244,7 +1244,7 @@ a {
   text-underline-offset: 4px;
 }
 
-/* Recent work */
+ 
 .work-section {
   position: relative;
   overflow: hidden;
@@ -1490,7 +1490,7 @@ a {
     animation: serviceReveal 260ms ease both;
   }
 
-  /* Search results stay in the same horizontal swipe rail on mobile. */
+   
   .services-grid.is-searching {
     grid-auto-flow: column;
     grid-auto-columns: min(82vw, 330px);
@@ -1537,7 +1537,7 @@ a {
     transform: none !important;
   }
 
-  /* Regular mobile gallery, with alternating portrait/landscape rhythm. */
+   
   .work-card-featured { min-height: 320px; }
   .work-card-top { min-height: 205px; }
   .work-card-bottom { min-height: 285px; }
@@ -1545,7 +1545,7 @@ a {
 }
 
 
-/* How it works */
+ 
 .process-section {
   position: relative;
   overflow: hidden;
@@ -1737,7 +1737,7 @@ a {
 
 .process-step-dark p { color: rgba(255,255,255,.62); }
 
-/* Reviews */
+ 
 .reviews-section {
   position: relative;
   overflow: hidden;
@@ -2031,7 +2031,7 @@ a {
 
 
 
-/* Uniform process cards */
+ 
 .process-step,
 .process-step-dark {
   background: rgba(255,255,255,.94);
@@ -2054,7 +2054,7 @@ a {
 .process-step p,
 .process-step-dark p { color: #6c7075; }
 
-/* Reviews */
+ 
 .reviews-section {
   position: relative;
   overflow: hidden;
@@ -2210,7 +2210,7 @@ a {
 .reviews-link-secondary:hover,
 .reviews-link-secondary:focus-visible { background: rgba(255,255,255,.08); }
 
-/* About */
+ 
 .about-section {
   position: relative;
   overflow: hidden;
@@ -2512,7 +2512,7 @@ a {
 }
 
 
-/* Search input cleanup */
+ 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -2522,14 +2522,14 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-/* Slight cleanup for the service search box */
+ 
 .services-search {
   flex: initial;
   width: 100%;
   max-width: 760px;
 }
 
-/* Reviews */
+ 
 .reviews-section {
   position: relative;
   overflow: hidden;
@@ -2676,7 +2676,7 @@ input[type="search"]::-webkit-search-results-decoration {
   border: 1px solid rgba(255,255,255,.18);
 }
 
-/* About */
+ 
 .about-section {
   position: relative;
   overflow: hidden;
@@ -2832,7 +2832,7 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 1.6;
 }
 
-/* Service area */
+ 
 .service-area-section {
   position: relative;
   overflow: hidden;
@@ -2940,7 +2940,7 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 1.45;
 }
 
-/* FAQ */
+ 
 .faq-section {
   position: relative;
   overflow: hidden;
@@ -3043,7 +3043,7 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 1.7;
 }
 
-/* Contact */
+ 
 .contact-section {
   position: relative;
   overflow: hidden;
@@ -3159,7 +3159,7 @@ input[type="search"]::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
-/* Footer */
+ 
 .site-footer {
   background: #090a0b;
   color: #fff;
@@ -3355,9 +3355,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-/* ===== v12 requested layout fixes ===== */
+ 
 
-/* Put Service Area before Reviews in the DOM. This section is intentionally simple and spacious. */
+ 
 .service-area-section {
   background: #111214;
 }
@@ -3396,7 +3396,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none !important;
 }
 
-/* Reviews: prevent any inherited white blocks / patches. */
+ 
 .reviews-section,
 .reviews-inner,
 .reviews-grid,
@@ -3409,7 +3409,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background: rgba(18, 20, 23, 0.82);
 }
 
-/* About: both columns are the same visual height on desktop. */
+ 
 .about-inner {
   width: min(1180px, calc(100% - 56px));
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -3481,7 +3481,7 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 1.5;
 }
 
-/* Contact: distinct existing background image + substantially wider form. */
+ 
 .contact-section {
   background:
     linear-gradient(90deg, rgba(7,8,10,.94) 0%, rgba(7,8,10,.84) 34%, rgba(7,8,10,.72) 68%, rgba(7,8,10,.88) 100%),
@@ -3532,7 +3532,7 @@ input[type="search"]::-webkit-search-results-decoration {
   min-height: 160px;
 }
 
-/* FAQ is below contact and nothing is open by default. */
+ 
 .faq-heading-simple {
   grid-template-columns: 1fr;
   margin-bottom: 34px;
@@ -3630,14 +3630,14 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-/* ===== v13 final cleanup ===== */
+ 
 
-/* Service Area: map on the left, copy on the right. */
+ 
 .service-area-inner {
   grid-template-columns: minmax(600px, 1.38fr) minmax(280px, .62fr);
 }
 
-/* Reviews: every card is equal. No featured state and no decorative quote marks. */
+ 
 .review-card,
 .review-card-featured {
   transform: none !important;
@@ -3664,7 +3664,7 @@ input[type="search"]::-webkit-search-results-decoration {
   color: var(--yellow) !important;
 }
 
-/* FAQ: smoother height/opacity animation. JS sets the actual panel height. */
+ 
 .faq-panel,
 .faq-item .faq-panel,
 .faq-item.is-open .faq-panel {
@@ -3694,9 +3694,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-/* ===== v14 desktop-only wrap-up ===== */
+ 
 @media (min-width: 761px) {
-  /* Services: move the headline lower and place search where the old body copy lived. */
+   
   .services-inner {
     display: grid;
     grid-template-columns: minmax(0, 1.06fr) minmax(360px, .76fr);
@@ -3740,7 +3740,7 @@ input[type="search"]::-webkit-search-results-decoration {
     grid-column: 1 / -1;
   }
 
-  /* The grid's height is animated in JS; keep the reveal on the cards subtle. */
+   
   .services-grid {
     will-change: height;
   }
@@ -3754,7 +3754,7 @@ input[type="search"]::-webkit-search-results-decoration {
     to { opacity: 1; transform: translateY(0) scale(1); }
   }
 
-  /* Recent Work: remove the internal placeholder guidance copy. */
+   
   .work-heading {
     grid-template-columns: 1fr;
   }
@@ -3763,15 +3763,15 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none !important;
   }
 
-  /* How it works: keep the section, remove the extra CTA. */
+   
   .process-cta {
     display: none !important;
   }
 
-  /* Desktop section alternation:
-     How It Works white -> Service Area dark -> Reviews white -> About dark -> Contact white -> FAQ dark. */
+   
 
-  /* Reviews = white */
+
+   
   .reviews-section {
     background:
       radial-gradient(circle at 12% 16%, rgba(244,196,0,.08), transparent 24%),
@@ -3828,7 +3828,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background: #fff;
   }
 
-  /* About = dark, using a different CSS texture instead of reusing another image. */
+   
   .about-section {
     background:
       radial-gradient(circle at 80% 18%, rgba(244,196,0,.1), transparent 24%),
@@ -3873,7 +3873,7 @@ input[type="search"]::-webkit-search-results-decoration {
     box-shadow: 0 24px 60px rgba(0,0,0,.3);
   }
 
-  /* Contact = white */
+   
   .contact-section {
     background:
       radial-gradient(circle at 8% 18%, rgba(244,196,0,.1), transparent 23%),
@@ -3925,7 +3925,7 @@ input[type="search"]::-webkit-search-results-decoration {
     color: #8b9095;
   }
 
-  /* FAQ = dark */
+   
   .faq-section {
     background:
       radial-gradient(circle at 86% 16%, rgba(244,196,0,.09), transparent 22%),
@@ -3968,9 +3968,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-/* Desktop polish v15 - mobile intentionally unchanged */
+ 
 @media (min-width: 761px) {
-  /* Service Area: distinct dark treatment with no yellow wash. */
+   
   .service-area-section {
     background:
       linear-gradient(115deg, rgba(255,255,255,.025) 0 1px, transparent 1px 100%),
@@ -3985,7 +3985,7 @@ input[type="search"]::-webkit-search-results-decoration {
     opacity: 1 !important;
   }
 
-  /* Reviews: clean white grid, no yellow tint. */
+   
   .reviews-section {
     background: #f7f7f4 !important;
   }
@@ -4069,12 +4069,12 @@ input[type="search"]::-webkit-search-results-decoration {
     transform: translateX(18px);
   }
 
-  /* Keep bottom review links for mobile only. */
+   
   .reviews-actions {
     display: none !important;
   }
 
-  /* About: remove bulk and use a cleaner, non-yellow dark texture. */
+   
   .about-section {
     background:
       linear-gradient(135deg, rgba(255,255,255,.022) 0 1px, transparent 1px 50%),
@@ -4156,7 +4156,7 @@ input[type="search"]::-webkit-search-results-decoration {
     color: #fff !important;
   }
 
-  /* Contact: clean white grid only, no yellow glow. */
+   
   .contact-section {
     background: #f7f7f4 !important;
   }
@@ -4169,7 +4169,7 @@ input[type="search"]::-webkit-search-results-decoration {
     opacity: .72 !important;
   }
 
-  /* FAQ: remove the yellow corner highlight entirely. */
+   
   .faq-section {
     background:
       radial-gradient(circle, rgba(255,255,255,.045) 1px, transparent 1.15px),
@@ -4182,7 +4182,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-/* Mobile keeps the existing review controls at the bottom and hides desktop extras. */
+ 
 @media (max-width: 760px) {
   .reviews-heading-controls {
     display: none !important;
@@ -4190,8 +4190,8 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-/* ===== v16 mobile-first polish + supplied JV Electric details ===== */
-/* Desktop layout/design above 1080px is intentionally untouched. */
+ 
+ 
 
 :root {
   --brand-gold: #FFD401;
@@ -4199,14 +4199,14 @@ input[type="search"]::-webkit-search-results-decoration {
   --brand-white: #FFFFFF;
 }
 
-/* New mobile-only elements are hidden by default so desktop renders exactly as v15. */
+ 
 .mobile-brand-logo,
 .hero-slogan {
   display: none;
 }
 
 @media (max-width: 1080px) {
-  /* Match the supplied logo's true black background on the mobile/tablet header. */
+   
   .site-header {
     background: var(--brand-black);
   }
@@ -4215,7 +4215,7 @@ input[type="search"]::-webkit-search-results-decoration {
     min-height: 76px;
   }
 
-  /* The supplied wordmark already says JV Electric, so remove the duplicate placeholder/name on mobile. */
+   
   .brand-area > .logo-placeholder,
   .brand-area > .brand-name {
     display: none;
@@ -4242,7 +4242,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background: #0d0d0d;
   }
 
-  /* Smooth, quick dropdown instead of display:none -> display:block snapping. */
+   
   .mobile-menu {
     display: block;
     overflow: hidden;
@@ -4315,7 +4315,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 @media (max-width: 760px) {
-  /* Give the hero substantially more breathing room on phones. */
+   
   .hero-inner {
     width: calc(100% - 44px);
     gap: 44px;
@@ -4358,7 +4358,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin: 10px auto 0;
   }
 
-  /* Center the main work card on mobile, then keep the two supporting cards offset around it. */
+   
   .project-card-main {
     width: 88%;
     height: 76%;
@@ -4418,7 +4418,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
-/* ===== v17 requested refinements ===== */
+ 
 .services-rail-shell{position:relative;min-width:0;grid-column:1/-1}.services-rail-button{display:none}.process-title-mobile,.process-copy-mobile,.mobile-floating-call{display:none}
 
 @media (min-width:761px){
@@ -4466,7 +4466,7 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (max-width:420px){.services-rail-button{width:40px;height:40px}.mobile-floating-call{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));min-height:50px;padding:0 18px}}
 
 
-/* ===== v18 requested refinements ===== */
+ 
 .brand-logo,
 .footer-logo {
   display: inline-flex;
@@ -4759,7 +4759,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-/* ===== v19 requested refinements ===== */
+ 
 .reviews-link,
 .footer-column a[href*="google.com/search?q=jv+electric"] {
   display: inline-flex;
@@ -4830,7 +4830,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-/* ===== v20 requested refinements ===== */
+ 
 html, body {
   max-width: 100%;
 }
@@ -5254,12 +5254,12 @@ html, body {
   }
 }
 
-/* ===== v21 focused mobile refinements + requested desktop fixes ===== */
+ 
 .about-desktop-layout { display: block; }
 .about-mobile-layout { display: none; }
 .footer-legal-mobile { display: none; }
 
-/* Desktop review carousel: always one straight row of exactly three cards. */
+ 
 @media (min-width: 761px) {
   .reviews-carousel-shell {
     overflow: hidden;
@@ -5287,7 +5287,7 @@ html, body {
     display: none !important;
   }
 
-  /* Restore the exact desktop About layout from before the mobile-only pass. */
+   
   .about-desktop-layout { display: block !important; }
   .about-mobile-layout { display: none !important; }
 
@@ -5351,11 +5351,11 @@ html, body {
 }
 
 @media (max-width: 760px) {
-  /* Mobile-only About layout. */
+   
   .about-desktop-layout { display: none !important; }
   .about-mobile-layout { display: block !important; }
 
-  /* Remove decorative yellow glows/patches. Yellow remains only as deliberate accents/CTAs. */
+   
   .hero::before {
     background: linear-gradient(90deg, rgba(8,9,11,.97) 0%, rgba(8,9,11,.92) 34%, rgba(8,9,11,.68) 68%, rgba(8,9,11,.48) 100%) !important;
   }
@@ -5374,7 +5374,7 @@ html, body {
     background: linear-gradient(135deg, transparent 0 62%, rgba(255,255,255,.02) 62% 63%, transparent 63% 100%) !important;
   }
 
-  /* Main project photo comes clearly to the front and moves the side cards away. */
+   
   .hero-visual.main-focused .project-card-main {
     z-index: 40 !important;
     transform: translateX(-50%) translateY(-8px) translateZ(220px) scale(1.075) rotateY(-1deg) rotateZ(.15deg) !important;
@@ -5394,7 +5394,7 @@ html, body {
     filter: brightness(.82) saturate(.86) !important;
   }
 
-  /* Yellow mini review band directly after the hero/trust content. */
+   
   .hero-review-strip {
     display: block !important;
     padding: 26px 0 30px !important;
@@ -5551,7 +5551,7 @@ html, body {
     border-color: #060606;
   }
 
-  /* Process returns to neutral gray numbering. */
+   
   .process-number,
   .process-step-dark .process-number {
     color: #b8bcc1 !important;
@@ -5566,7 +5566,7 @@ html, body {
     margin-right: auto !important;
   }
 
-  /* City bubbles replace the explanatory paragraph on mobile. */
+   
   .service-area-copy-desktop,
   .service-area-copy-mobile {
     display: none !important;
@@ -5586,7 +5586,7 @@ html, body {
     border-color: rgba(255,255,255,.11);
   }
 
-  /* Mobile main review carousel: cards stay flat and arrows sit at the sides. */
+   
   .reviews-carousel-shell .review-card,
   .reviews-carousel-shell .review-card-featured {
     transform: none !important;
@@ -5605,7 +5605,7 @@ html, body {
     width: 18px;
   }
 
-  /* Mobile 10+ badge uses the same dark-gray desktop treatment and stays bottom-right. */
+   
   .about-mobile-layout .about-visual {
     position: relative !important;
   }
@@ -5653,7 +5653,7 @@ html, body {
     line-height: 1.35;
   }
 
-  /* Footer: top row Quick Links + Service Area, bottom row Legal + Contact. */
+   
   .footer-legal-inline { display: none !important; }
   .footer-legal-mobile { display: grid !important; }
 
@@ -5668,7 +5668,7 @@ html, body {
   }
 }
 
-/* Restore original neutral process numbering on every breakpoint. */
+ 
 .process-number,
 .process-step-dark .process-number {
   color: #b8bcc1 !important;
@@ -5688,9 +5688,9 @@ html, body {
   }
 }
 
-/* ===== v22 final mobile refinements ===== */
+ 
 @media (max-width: 760px) {
-  /* Main work photo should clearly pop to the front on tap. */
+   
   .hero-visual {
     isolation: isolate;
     overflow: visible;
@@ -5716,7 +5716,7 @@ html, body {
     filter: brightness(.8) saturate(.82) !important;
   }
 
-  /* Mini customer reviews section: black with subtle yellow accents. */
+   
   .hero-review-strip {
     background:
       linear-gradient(180deg, #090a0b 0%, #0d0f12 100%) !important;
@@ -5792,7 +5792,7 @@ html, body {
     border-color: var(--brand-gold) !important;
   }
 
-  /* Service area: more stripes, no yellow glow, keep bolt city tags. */
+   
   .service-area-section {
     background: #0d0f12 !important;
   }
@@ -5825,7 +5825,7 @@ html, body {
     color: var(--brand-gold) !important;
   }
 
-  /* Tighter footer on mobile. */
+   
   .site-footer {
     background: #070809;
   }
@@ -5879,11 +5879,11 @@ html, body {
   }
 }
 
-/* ===== v23 mobile cleanup ===== */
+ 
 .service-area-tags-mobile { display: none; }
 
 @media (max-width: 760px) {
-  /* Remove the accidental slash/pattern overlays. */
+   
   .hero-review-strip {
     position: relative;
     overflow: hidden;
@@ -5898,7 +5898,7 @@ html, body {
     background: none !important;
   }
 
-  /* Keep the hero photo stack in its original mobile arrangement. */
+   
   .hero-visual.main-focused .project-card-main {
     z-index: 2 !important;
     transform: translateX(-50%) rotateY(-6deg) rotateZ(1deg) translateZ(12px) !important;
@@ -5924,7 +5924,7 @@ html, body {
     opacity: 1 !important;
   }
 
-  /* Customer reviews: black, clean, more breathing room, no yellow marker. */
+   
   .hero-review-strip-shell {
     width: calc(100% - 28px) !important;
   }
@@ -5954,7 +5954,7 @@ html, body {
     margin-top: 16px !important;
   }
 
-  /* Service-area cities move below the map. */
+   
   .service-area-section {
     background: #0d0f12 !important;
   }
@@ -5996,7 +5996,7 @@ html, body {
     display: none !important;
   }
 
-  /* Compress the footer without dropping information. */
+   
   .footer-inner,
   .footer-inner-compact {
     width: calc(100% - 20px) !important;

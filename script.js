@@ -1,12 +1,12 @@
-/*
- * JV Electric update bootstrap
- * Preserves the exact script.js version that was on main when this update was built,
- * then loads the client-requested hero / recent-work / social updates.
- */
+ 
+
+
+
+
 document.write('<script src="https://cdn.jsdelivr.net/gh/policypal1/electrical-company-@f4caf453cd8b502ecbdee36dd0a4b4fced37fcef/script.js"></' + 'script>');
 document.write('<script src="jv-client-updates.js"></' + 'script>');
 
-/* JV Electric contact form. */
+ 
 window.JV_SITE_CONFIG = Object.freeze({
   formEndpoint: 'https://script.google.com/macros/s/AKfycbxevAEZaQ85iIC3lrcNU2qaMLVj2Qjzk_Hfh-R0ZaduymeYoo9qFX5lN6GudnBNIj9_ew/exec'
 });
@@ -203,7 +203,7 @@ window.JV_SITE_CONFIG = Object.freeze({
     form.method = 'POST';
     form.target = iframe.name;
 
-    /* Success is shown only after Apps Script explicitly confirms the email was sent. */
+     
     timeoutId = window.setTimeout(() => {
       if (pending) showFullFormError();
     }, 20000);
