@@ -1,0 +1,163 @@
+const JV_SETTINGS = Object.freeze({
+  NOTIFY_EMAILS: ['samuelkumpula4@gmail.com', 'jvelectriic@gmail.com'],
+  TIME_ZONE: 'America/Los_Angeles'
+});
+
+function doGet() {
+  return HtmlService
+    .createHtmlOutput('JV Electric lead endpoint is online.')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+function doPost(e) {
+  try {
+    const p = (e && e.parameter) || {};
+
+    // Honeypot: silently accept bots without sending an email.
+    if (clean_(p.website, 200)) {
+      return browserResponse_(true);
+    }
+
+    const now = new Date();
+    const lead = {
+      name: clean_(p.name, 100),
+      phone: clean_(p.phone, 40),
+      email: clean_(p.email, 150),
+      projectType: clean_(p.projectType, 120),
+      projectDetails: clean_(p.projectDetails, 2500),
+      time: Utilities.formatDate(now, JV_SETTINGS.TIME_ZONE, 'MMM d, yyyy h:mm a') + ' PT'
+    };
+
+    if (!lead.name || !lead.phone || !lead.projectDetails) {
+      return browserResponse_(false);
+    }
+
+    sendLeadEmail_(lead);
+    return browserResponse_(true);
+  } catch (error) {
+    console.error(error && error.stack ? error.stack : error);
+    return browserResponse_(false);
+  }
+}
+
+function sendLeadEmail_(lead) {
+  const subjectName = lead.name.replace(/[\r\n]+/g, ' ').slice(0, 100);
+  const subject = '[NEW JV ELECTRIC LEAD] ' + subjectName;
+
+  const plainBody = [
+    'Name: ' + lead.name,
+    'Phone: ' + lead.phone,
+    'Email: ' + (lead.email || 'Not provided'),
+    'Project Type: ' + (lead.projectType || 'Not provided'),
+    'Project Details: ' + lead.projectDetails,
+    'Time: ' + lead.time
+  ].join('\n\n');
+
+  const phoneHref = 'tel:' + lead.phone.replace(/[^+\d]/g, '');
+  const phoneValue = '<a href="' + escapeAttribute_(phoneHref) + '" style="color:#111111;text-decoration:none;font-weight:700;">' + escapeHtml_(lead.phone) + '</a>';
+  const emailValue = lead.email
+    ? '<a href="mailto:' + escapeAttribute_(lead.email) + '" style="color:#111111;text-decoration:none;font-weight:700;">' + escapeHtml_(lead.email) + '</a>'
+    : 'Not provided';
+
+  const fields = [
+    ['Name', escapeHtml_(lead.name)],
+    ['Phone', phoneValue],
+    ['Email', emailValue],
+    ['Project Type', escapeHtml_(lead.projectType || 'Not provided')],
+    ['Project Details', escapeHtml_(lead.projectDetails).replace(/\n/g, '<br>')],
+    ['Time', escapeHtml_(lead.time)]
+  ];
+
+  const rows = fields.map(function(field, index) {
+    const border = index === fields.length - 1 ? 'none' : '1px solid #ececec';
+    return '' +
+      '<tr>' +
+        '<td style="padding:18px 22px;border-bottom:' + border + ';">' +
+          '<div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.2;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:#777777;margin:0 0 6px;">' + field[0] + '</div>' +
+          '<div style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5;color:#111111;word-break:break-word;">' + field[1] + '</div>' +
+        '</td>' +
+      '</tr>';
+  }).join('');
+
+  const htmlBody = '' +
+    '<!doctype html>' +
+    '<html><body style="margin:0;padding:0;background:#f2f2f2;">' +
+      '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;background:#f2f2f2;margin:0;padding:0;">' +
+        '<tr><td align="center" style="padding:32px 12px;">' +
+          '<table role="presentation" width="620" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:620px;background:#ffffff;border:1px solid #dddddd;border-radius:14px;overflow:hidden;border-collapse:separate;">' +
+            '<tr>' +
+              '<td style="background:#ffc400;padding:24px 26px;">' +
+                '<div style="font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.15;font-weight:800;color:#111111;">JV Electric</div>' +
+                '<div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.3;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#111111;margin-top:5px;">New Estimate Request</div>' +
+              '</td>' +
+            '</tr>' +
+            rows +
+          '</table>' +
+        '</td></tr>' +
+      '</table>' +
+    '</body></html>';
+
+  // MailApp supports a plain-text fallback plus a true HTML body.
+  MailApp.sendEmail({
+    to: JV_SETTINGS.NOTIFY_EMAILS.join(','),
+    subject: subject,
+    body: plainBody,
+    htmlBody: htmlBody,
+    name: 'JV Electric Website'
+  });
+}
+
+// Optional diagnostic: run this once from the Apps Script editor.
+// If you receive the styled card, email permissions and HTML rendering are working.
+function testEmail() {
+  sendLeadEmail_({
+    name: 'Test Lead',
+    phone: '(360) 442-3618',
+    email: 'test@example.com',
+    projectType: 'Electrical Estimate',
+    projectDetails: 'This is a test of the JV Electric HTML lead card.',
+    time: Utilities.formatDate(new Date(), JV_SETTINGS.TIME_ZONE, 'MMM d, yyyy h:mm a') + ' PT'
+  });
+}
+
+function browserResponse_(ok) {
+  const payload = JSON.stringify({ source: 'jv-electric-form', ok: Boolean(ok) });
+  const html = '<!doctype html><html><body style="margin:0">' +
+    '<script>' +
+    '(function(){' +
+      'var msg=' + payload + ';' +
+      'function sendTo(target){try{if(target&&target.postMessage){target.postMessage(msg,"*");}}catch(e){}}' +
+      'function send(){' +
+        'sendTo(window.parent);' +
+        'sendTo(window.top);' +
+        'sendTo(window.opener);' +
+      '}' +
+      'send();setTimeout(send,100);setTimeout(send,400);setTimeout(send,1000);' +
+    '})();' +
+    '</script>' +
+    '</body></html>';
+
+  return HtmlService
+    .createHtmlOutput(html)
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+function clean_(value, maxLength) {
+  return String(value == null ? '' : value)
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '')
+    .trim()
+    .slice(0, maxLength || 1000);
+}
+
+function escapeHtml_(value) {
+  return String(value == null ? '' : value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function escapeAttribute_(value) {
+  return escapeHtml_(value).replace(/`/g, '&#96;');
+}
