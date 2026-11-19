@@ -1,5 +1,5 @@
 const JV_SETTINGS = Object.freeze({
-  NOTIFY_EMAILS: ['samuelkumpula4@gmail.com', 'jvelectriic@gmail.com'],
+  NOTIFY_EMAILS: ['diallodigital10@gmail.com', 'jvelectriic@gmail.com'],
   TIME_ZONE: 'America/Los_Angeles'
 });
 
