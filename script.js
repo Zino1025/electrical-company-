@@ -8,7 +8,7 @@ document.write('<script src="jv-client-updates.js"></' + 'script>');
 
  
 window.JV_SITE_CONFIG = Object.freeze({
-  formEndpoint: 'https://script.google.com/macros/s/AKfycbxevAEZaQ85iIC3lrcNU2qaMLVj2Qjzk_Hfh-R0ZaduymeYoo9qFX5lN6GudnBNIj9_ew/exec'
+  formEndpoint: 'https://script.google.com/macros/s/AKfycbzy289R1s32ck_Ax-PyRZIFpuW1BV_0odj2ZaiPyuzWHcYQ7s-W-Jk2scIdBCj7e0k/exec'
 });
 
 (() => {
