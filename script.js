@@ -118,6 +118,13 @@ window.JV_SITE_CONFIG = Object.freeze({
   const showSuccess = () => {
     if (!pending) return;
     resetPending();
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'generate_lead', {
+        form_name: 'estimate_form',
+        project_type: String(form.elements.projectType?.value || ''),
+        page_path: location.pathname
+      });
+    }
     form.reset();
 
     if (!card) {
