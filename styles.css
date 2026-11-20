@@ -6068,3 +6068,39 @@ html, body {
     font-size: 10px !important;
   }
 }
+
+
+/* Trust row under the hero headline */
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hero-trust li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-trust li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  flex: none;
+}
+
+@media (max-width: 760px) {
+  .hero-trust {
+    gap: 6px 14px;
+    font-size: 14px;
+  }
+}

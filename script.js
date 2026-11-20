@@ -1,12 +1,3 @@
- 
-
-
-
-
-document.write('<script src="https://cdn.jsdelivr.net/gh/policypal1/electrical-company-@f4caf453cd8b502ecbdee36dd0a4b4fced37fcef/script.js"></' + 'script>');
-document.write('<script src="jv-client-updates.js"></' + 'script>');
-
- 
 window.JV_SITE_CONFIG = Object.freeze({
   formEndpoint: 'https://script.google.com/macros/s/AKfycbzy289R1s32ck_Ax-PyRZIFpuW1BV_0odj2ZaiPyuzWHcYQ7s-W-Jk2scIdBCj7e0k/exec'
 });
