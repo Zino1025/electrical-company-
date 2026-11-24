@@ -1,5 +1,5 @@
 window.JV_SITE_CONFIG = Object.freeze({
-  formEndpoint: 'https://script.google.com/macros/s/AKfycbzy289R1s32ck_Ax-PyRZIFpuW1BV_0odj2ZaiPyuzWHcYQ7s-W-Jk2scIdBCj7e0k/exec'
+  formEndpoint: 'https://script.google.com/macros/s/AKfycbwuR2HGMt4tMXNNuFJwz1KnwFyRtWdEQd279pRi4yZSRBbZLwMy5lmgpD04Ko2yUFUr/exec'
 });
 
 (() => {
